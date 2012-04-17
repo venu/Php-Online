@@ -90,8 +90,9 @@ function php_check_runtime( $php )
 {
 	global $CONF;
 	# Prevent output
+	ob_start();
 	exec( $CONF["PHP_PATH"] . ' -c "'.ROOT_PATH.'/php.ini" < "'.$php.'"', $ret);
-	
+	$output = ob_get_clean() ;
 	if( $ret !== 0 )
 	{
 		# Runtime error to report?
