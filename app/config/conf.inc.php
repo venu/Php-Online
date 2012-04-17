@@ -9,7 +9,7 @@
 	
 	
 	require(LIBRARY_PATH . '/utilities.php');
-	switch(ENV_MODE){	
+	switch(APPLICATION_ENV){	
 		case  'development':
 			ini_set("display_errors", 1);
 			error_reporting(E_ALL | E_STRICT);

@@ -29,7 +29,7 @@ function php_check_syntax( $php, $isFile=false )
     {
         # Prevent output
         ob_start();
-        system( 'F:\wamp\bin\php\php5.3.9\php -c "'.dirname(__FILE__).'/php.ini" -l < "'.$php.'"', $ret );
+        system( 'php -c "'.ROOT_PATH.'/php.ini" -l < "'.$php.'"', $ret );
         $output = ob_get_clean();
 
         if( $ret !== 0 )
@@ -88,7 +88,7 @@ function token_fix( &$tokens ) {
 function php_check_runtime( $php )
 {
 	# Prevent output
-	exec( 'F:\wamp\bin\php\php5.3.9\php -c "'.dirname(__FILE__).'/php.ini" < "'.$php.'"', $ret);
+	exec( 'php -c "'.ROOT_PATH.'/php.ini" < "'.$php.'"', $ret);
 	
 	if( $ret !== 0 )
 	{

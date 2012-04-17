@@ -6,6 +6,8 @@ php_value max_input_time 60
 php_value post_max_size 5M
 php_value upload_max_filesize 5M
 
+SetEnv APPLICATION_ENV "development"
+
 RewriteEngine On
 RewriteRule ^editor/(.*)$ index.php?p=editor&file=$1 [NC,L]
 RewriteRule ^view/(.*)$ index.php?p=display&ajax=1&file=$1 [NC,L]

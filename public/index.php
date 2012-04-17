@@ -1,6 +1,6 @@
 <?php  
 	//Load Environment
-	define('ENV_MODE','development');
+	defined('APPLICATION_ENV')  || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
 	
 	// Define path to application directory
 	defined('APPLICATION_PATH')  || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../app'));
