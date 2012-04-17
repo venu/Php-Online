@@ -8,18 +8,21 @@ Installation
 
 * Download the code.
 * Place your code in web root folder and access public folder. If you want to host under your domain, point to public folder.
-* Set your environment mode in .htaccess file in public folder (optional)
-	* SetEnv APPLICATION_ENV "development"
 * Give write access to the code folder.
-* Open config/config.inc.php file (optional)
-	* Change the file extension if you want 
-* Open the environment config specific file (app/config/conf_dev.inc.php) (optional)
-	* Set the database connection
-	* Set the php path
-* Modify the php.ini file (optional)
-	* you can pull the php.ini from php installation location and add disable_functions property.
 * Thats it. Enjoy :)
 
+
+Troubleshoot
+------------
+* Check your environment mode in .htaccess file in public folder.
+	* SetEnv APPLICATION_ENV "development"
+* Open the environment config specific file (app/config/conf_dev.inc.php)
+	* Check the database connection
+	* Check the php path
+* Modify the app/php.ini file
+	* you can pull the php.ini from php installation location and add disable_functions property.
+* Open config/config.inc.php file
+	* Change the file extension if you want 
 
 Features Planning
 -----------------
