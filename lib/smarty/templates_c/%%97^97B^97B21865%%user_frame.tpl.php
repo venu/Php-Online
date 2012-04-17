@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.14, created on 2012-04-17 08:01:11
+<?php /* Smarty version 2.6.14, created on 2012-04-17 08:42:24
          compiled from user_frame.tpl */ ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js msie ie6 lte9 lte8 lte7"  xmlns:fb="http://www.facebook.com/2008/fbml"> <![endif]-->
@@ -15,28 +15,28 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 <link rel="stylesheet" href="<?php echo $this->_tpl_vars['public_path']; ?>
-js/lib/CodeMirror/codemirror.css">
+/js/lib/CodeMirror/codemirror.css">
 <script src="<?php echo $this->_tpl_vars['public_path']; ?>
-js/lib/CodeMirror/codemirror.js"></script>
+/js/lib/CodeMirror/codemirror.js"></script>
 <script src="<?php echo $this->_tpl_vars['public_path']; ?>
-js/lib/CodeMirror/mode/xml/xml.js"></script>
+/js/lib/CodeMirror/mode/xml/xml.js"></script>
 <script src="<?php echo $this->_tpl_vars['public_path']; ?>
-js/lib/CodeMirror/mode/javascript/javascript.js"></script>
+/js/lib/CodeMirror/mode/javascript/javascript.js"></script>
 <script src="<?php echo $this->_tpl_vars['public_path']; ?>
-js/lib/CodeMirror/mode/css/css.js"></script>
+/js/lib/CodeMirror/mode/css/css.js"></script>
 <script src="<?php echo $this->_tpl_vars['public_path']; ?>
-js/lib/CodeMirror/mode/clike/clike.js"></script>
+/js/lib/CodeMirror/mode/clike/clike.js"></script>
 <script src="<?php echo $this->_tpl_vars['public_path']; ?>
-js/lib/CodeMirror/mode/php/php.js"></script>
+/js/lib/CodeMirror/mode/php/php.js"></script>
 <link rel="stylesheet" href="<?php echo $this->_tpl_vars['public_path']; ?>
-js/lib/CodeMirror/theme/default.css">
+/js/lib/CodeMirror/theme/default.css">
 <style type="text/css">
 .CodeMirror { border: 1px solid #cccccc;}
 .activeline { background-color: #F0F0FF !important; }
 body, .CodeMirror{font-family:calibri, arial;}
 </style>
 <link rel="stylesheet" href="<?php echo $this->_tpl_vars['public_path']; ?>
-js/lib/CodeMirror/css/docs.css">
+/js/lib/CodeMirror/css/docs.css">
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script> 
 <script>!window.jQuery && document.write(unescape('%3Cscript src="<?php echo $this->_tpl_vars['public_path']; ?>
@@ -63,7 +63,9 @@ unset($_smarty_tpl_vars);
 <?php endif; ?> 
 
 <footer>
-<div>Devloped by <a target="_blank" href="http://venu-t.tumblr.com/">Venu</a> & Powered by <a target="_blank" href="http://riktamtech.com/">Riktam Technologies Consulting</a>. © 2011-2012</div>
+<div style="float:right">Developed by <a target="_blank" href="http://venu-t.tumblr.com/">Venu</a> & Powered by <a target="_blank" href="http://riktamtech.com/">Riktam Technologies Consulting</a>. © 2011-2012</div>
+<div><a href="https://github.com/venu/Php-Online">Github project page →</a></div>
+
 </footer>
 </body>
 </html>

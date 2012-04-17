@@ -12,20 +12,20 @@
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-<link rel="stylesheet" href="{{$public_path}}js/lib/CodeMirror/codemirror.css">
-<script src="{{$public_path}}js/lib/CodeMirror/codemirror.js"></script>
-<script src="{{$public_path}}js/lib/CodeMirror/mode/xml/xml.js"></script>
-<script src="{{$public_path}}js/lib/CodeMirror/mode/javascript/javascript.js"></script>
-<script src="{{$public_path}}js/lib/CodeMirror/mode/css/css.js"></script>
-<script src="{{$public_path}}js/lib/CodeMirror/mode/clike/clike.js"></script>
-<script src="{{$public_path}}js/lib/CodeMirror/mode/php/php.js"></script>
-<link rel="stylesheet" href="{{$public_path}}js/lib/CodeMirror/theme/default.css">
+<link rel="stylesheet" href="{{$public_path}}/js/lib/CodeMirror/codemirror.css">
+<script src="{{$public_path}}/js/lib/CodeMirror/codemirror.js"></script>
+<script src="{{$public_path}}/js/lib/CodeMirror/mode/xml/xml.js"></script>
+<script src="{{$public_path}}/js/lib/CodeMirror/mode/javascript/javascript.js"></script>
+<script src="{{$public_path}}/js/lib/CodeMirror/mode/css/css.js"></script>
+<script src="{{$public_path}}/js/lib/CodeMirror/mode/clike/clike.js"></script>
+<script src="{{$public_path}}/js/lib/CodeMirror/mode/php/php.js"></script>
+<link rel="stylesheet" href="{{$public_path}}/js/lib/CodeMirror/theme/default.css">
 <style type="text/css">
 .CodeMirror { border: 1px solid #cccccc;}
 .activeline { background-color: #F0F0FF !important; }
 body, .CodeMirror{font-family:calibri, arial;}
 </style>
-<link rel="stylesheet" href="{{$public_path}}js/lib/CodeMirror/css/docs.css">
+<link rel="stylesheet" href="{{$public_path}}/js/lib/CodeMirror/css/docs.css">
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script> 
 <script>!window.jQuery && document.write(unescape('%3Cscript src="{{$public_path}}/js/lib/jquery-latest.min.js"%3E%3C/script%3E'))</script> 
@@ -44,7 +44,9 @@ body, .CodeMirror{font-family:calibri, arial;}
 {{/if}} 
 
 <footer>
-<div>Devloped by <a target="_blank" href="http://venu-t.tumblr.com/">Venu</a> & Powered by <a target="_blank" href="http://riktamtech.com/">Riktam Technologies Consulting</a>. © 2011-2012</div>
+<div style="float:right">Developed by <a target="_blank" href="http://venu-t.tumblr.com/">Venu</a> & Powered by <a target="_blank" href="http://riktamtech.com/">Riktam Technologies Consulting</a>. © 2011-2012</div>
+<div><a href="https://github.com/venu/Php-Online">Github project page →</a></div>
+
 </footer>
 </body>
 </html>

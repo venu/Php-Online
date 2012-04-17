@@ -3,6 +3,7 @@
 	session_start();
 
 	//load configaration
+	require(LIBRARY_PATH . '/utilities.php');
 	require("config/conf.inc.php");	
 	
 	// Connect to DB
