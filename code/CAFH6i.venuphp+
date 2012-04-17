@@ -1,7 +1,0 @@
-<?php
-
-$array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
-echo is_int(0);
-echo $key = array_search('sablue', $array); // $key = 2;
-$key = array_search('red', $array);   // $key = 1;
-?>

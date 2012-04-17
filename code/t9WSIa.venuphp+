@@ -1,2 +1,0 @@
-<?php
-echo sha1('TalGil3' . 'aEPHw3ncBI');

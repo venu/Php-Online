@@ -43,6 +43,8 @@ body, .CodeMirror{font-family:calibri, arial;}
     {{$err_msg}}
 {{/if}} 
 
-
+<footer>
+<div>Devloped by <a target="_blank" href="http://venu-t.tumblr.com/">Venu</a> & Powered by <a target="_blank" href="http://riktamtech.com/">Riktam Technologies Consulting</a>. © 2011-2012</div>
+</footer>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.14, created on 2011-11-26 05:56:40
+<?php /* Smarty version 2.6.14, created on 2012-04-17 08:01:11
          compiled from user_frame.tpl */ ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js msie ie6 lte9 lte8 lte7"  xmlns:fb="http://www.facebook.com/2008/fbml"> <![endif]-->
@@ -62,6 +62,8 @@ unset($_smarty_tpl_vars);
 
 <?php endif; ?> 
 
-
+<footer>
+<div>Devloped by <a target="_blank" href="http://venu-t.tumblr.com/">Venu</a> & Powered by <a target="_blank" href="http://riktamtech.com/">Riktam Technologies Consulting</a>. © 2011-2012</div>
+</footer>
 </body>
 </html>
