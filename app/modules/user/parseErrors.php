@@ -30,7 +30,7 @@ function php_check_syntax( $php, $isFile=false )
         # Prevent output
         ob_start();
 		global $CONF;
-        system( $CONF["PHP_PATH"] . ' -c "'.ROOT_PATH.'/php.ini" -l < "'.$php.'"', $ret );
+        system( $CONF["PHP_PATH"] . ' -c "'.APPLICATION_PATH.'/php.ini" -l < "'.$php.'"', $ret );
         $output = ob_get_clean();
 
         if( $ret !== 0 )
@@ -91,7 +91,7 @@ function php_check_runtime( $php )
 	global $CONF;
 	# Prevent output
 	ob_start();
-	exec( $CONF["PHP_PATH"] . ' -c "'.ROOT_PATH.'/php.ini" < "'.$php.'"', $ret);
+	exec( $CONF["PHP_PATH"] . ' -c "'.APPLICATION_PATH.'/php.ini" < "'.$php.'"', $ret);
 	$output = ob_get_clean() ;
 	if( $ret !== 0 )
 	{

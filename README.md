@@ -7,13 +7,13 @@ Installation
 -----------
 
 * Download the code.
-* Point your domain to public folder OR place your code in web root folder and access this.
+* Place your code in web root folder and access public folder. If you want to host under your domain, point to public folder.
 * Set your environment mode in .htaccess file in public folder (optional)
 	* SetEnv APPLICATION_ENV "development"
 * Give write access to the code folder.
 * Open config/config.inc.php file (optional)
 	* Change the file extension if you want 
-* Open the environment config specific file (app/config/conf_dev.inc.php)
+* Open the environment config specific file (app/config/conf_dev.inc.php) (optional)
 	* Set the database connection
 	* Set the php path
 * Modify the php.ini file (optional)
