@@ -13,6 +13,21 @@ function getServer($key = null, $default = null)
 	return (isset($_SERVER[$key])) ? $_SERVER[$key] : $default;
 }
 
+function setQuery($spec, $value = null)
+{
+       if ((null === $value) && !is_array($spec)) {
+               return;
+       }
+       if ((null === $value) && is_array($spec)) {
+               foreach ($spec as $key => $value) {
+                       setQuery($key, $value);
+               }
+               return true;
+       }
+       $_GET[(string) $spec] = $value;
+       return true;
+}
+
 function getHttpHost()
 {
 	$host = getServer('HTTP_HOST');

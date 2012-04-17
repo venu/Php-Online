@@ -6,17 +6,17 @@ You can run the PHP code online to quickly test some sample code. And also it he
 Installation
 -----------
 
-* Download the code
-* Point your domain to public folder
+* Download the code.
+* Point your domain to public folder OR place your code in web root folder.
 * Set your environment mode in .htaccess file in public folder
 	* SetEnv APPLICATION_ENV "development"
 * Give write access to the code folder.
 * Open config/config.inc.php file
-	* Change the file extension if you want
-* Open the environment config file (conf_dev.inc.php)
+	* Change the file extension if you want (optional)
+* Open the environment config specific file (app/config/conf_dev.inc.php)
 	* Set the database connection
 * Modify the php.ini file.
-	* you can pull the php.ini  from php installation location and add the disable_functions property.
+	* you can pull the php.ini  from php installation location and add disable_functions property.
 * Make sure php can be executable from shell.
 * Thats it. Enjoy :)
 

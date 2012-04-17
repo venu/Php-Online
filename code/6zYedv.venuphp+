@@ -1,0 +1,7 @@
+<?php
+echo curl_init();
+?>
+<p>The program says <?= hello("World") ?>.</p>
+<script>
+	alert("And here is some JS code");
+</script>
