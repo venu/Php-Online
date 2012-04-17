@@ -1,0 +1,21 @@
+<?php
+function signArgs($args){
+		ksort($args);
+
+		$concatinated_string = '';
+		foreach($args as $k => $v)
+		{
+			if ($k == 'auth')	continue;
+				
+			$concatinated_string  .= $k . $v;
+		}
+
+		return sha1('mys1cr1tk1y1' . $concatinated_string );
+}
+echo signArgs(array(
+	'app'=>'iphone',
+	'city_id'=>'1',
+	'lat'=>'34.44313455',
+	'long'=>'-118.44234353'
+	
+));

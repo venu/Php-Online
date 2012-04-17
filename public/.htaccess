@@ -1,0 +1,17 @@
+php_flag magic_quotes_sybase Off
+php_flag magic_quotes_gpc Off
+php_flag register_globals Off
+php_value max_execution_time 30
+php_value max_input_time 60
+php_value post_max_size 5M
+php_value upload_max_filesize 5M
+
+RewriteEngine On
+RewriteRule ^editor/(.*)$ index.php?p=editor&file=$1 [NC,L]
+RewriteRule ^view/(.*)$ index.php?p=display&ajax=1&file=$1 [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]

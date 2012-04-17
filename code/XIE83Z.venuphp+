@@ -1,0 +1,25 @@
+<?php
+function hello($who) {
+	return "Hello " . $who;
+}
+
+class student{
+ public $student = '';
+ 
+  function student($name){
+  	$this->student = $name;
+  }
+ 
+  function getSudent(){
+ 	return $this->student; 
+  }
+}
+
+print_r(new Student('venu'));
+print_r(new Student('gopal'));
+
+?>
+<p>The program says <?= hello("World") ?>.</p>
+<script>
+	alert("And here is some JS code"); // also colored
+</script>
