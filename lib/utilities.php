@@ -60,10 +60,10 @@ function getRequestUri($requestUri = null)
                     $requestUri .= '?' . $_SERVER['QUERY_STRING'];
                 }
             } else {
-                return $this;
+                return '';
             }
         } elseif (!is_string($requestUri)) {
-            return $this;
+            return '';
         } else {
             // Set GET items, if available
             if (false !== ($pos = strpos($requestUri, '?'))) {
@@ -110,8 +110,7 @@ function getBaseUrl($baseUrl = null)
 
 		if (0 === strpos($requestUri, $baseUrl)) {
 			// full $baseUrl matches
-			$this->_baseUrl = $baseUrl;
-			return $this;
+			return $baseUrl;
 		}
 
 		if (0 === strpos($requestUri, dirname($baseUrl))) {
@@ -128,8 +127,7 @@ function getBaseUrl($baseUrl = null)
 		$basename = basename($baseUrl);
 		if (empty($basename) || !strpos($truncatedRequestUri, $basename)) {
 			// no match whatsoever; set it blank
-			$this->_baseUrl = '';
-			return $this;
+			return '';
 		}
 
 		// If using mod_rewrite or ISAPI_Rewrite strip the script filename

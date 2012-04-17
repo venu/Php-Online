@@ -29,7 +29,8 @@ function php_check_syntax( $php, $isFile=false )
     {
         # Prevent output
         ob_start();
-        system( 'php -c "'.ROOT_PATH.'/php.ini" -l < "'.$php.'"', $ret );
+		global $CONF;
+        system( $CONF["PHP_PATH"] . ' -c "'.ROOT_PATH.'/php.ini" -l < "'.$php.'"', $ret );
         $output = ob_get_clean();
 
         if( $ret !== 0 )
@@ -87,8 +88,9 @@ function token_fix( &$tokens ) {
 
 function php_check_runtime( $php )
 {
+	global $CONF;
 	# Prevent output
-	exec( 'php -c "'.ROOT_PATH.'/php.ini" < "'.$php.'"', $ret);
+	exec( $CONF["PHP_PATH"] . ' -c "'.ROOT_PATH.'/php.ini" < "'.$php.'"', $ret);
 	
 	if( $ret !== 0 )
 	{

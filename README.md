@@ -17,6 +17,7 @@ Installation
 	* Set the database connection
 * Modify the php.ini file.
 	* you can pull the php.ini  from php installation location and add the disable_functions property.
+* Make sure php can be executable from shell.
 * Thats it. Enjoy :)
 	
 

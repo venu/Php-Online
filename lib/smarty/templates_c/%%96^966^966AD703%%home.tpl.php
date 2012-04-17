@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.14, created on 2011-11-26 05:43:44
+<?php /* Smarty version 2.6.14, created on 2012-04-17 09:41:31
          compiled from user/home.tpl */ ?>
 <div>This is an online editor for PHP, HTML, CSS, JS and a simple collaboration tool.
 Paste your code below, and we will run it and give you an URL you can use to share it in chat or email.</div>
@@ -15,7 +15,7 @@ function hello($who) {
  hello("World") <?php echo '?>'; ?>
 .</p>
 <script>
-	alert("And here is some JS code"); // also colored
+	alert("And here is some JS code");
 </script>
 </textarea>
 <div class="Actions">

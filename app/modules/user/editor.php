@@ -17,7 +17,7 @@
 					header("Location: ". $CONF["PATH_FROM_ROOT"]);
 					exit;	
 				}else{
-					header("Location: ".$CONF["PATH_FROM_ROOT"].'editor/'.$_GET['file']);	
+					header("Location: ".$CONF["PATH_FROM_ROOT"].'/editor/'.$_GET['file']);	
 					exit;
 				}
 				break;

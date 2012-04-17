@@ -4,14 +4,11 @@
 // SYSTEM ERROR MESSAGES //////////////////////////////////////////////////////////////
 	$CONF["404_NOT_FOUND_ERROR_MESSAGE"] =	"404, Page not found";
 	$CONF["NO_ACCESS_MESSAGE"] =	"Sorry. You are not allowed to access this page";
-	$CONF["PATH_FROM_ROOT"] =  getBaseUrl(); 
+	
 
 // GENERAL SITE CONFIGURATIONS ////////////////////////////////////////////////////////
-
-
+	$CONF["PATH_FROM_ROOT"] =  getBaseUrl(); 
 	$CONF["EXTENSION"] = ".venuphp+";
-	
-	
 	
 	
 	switch(APPLICATION_ENV){	
