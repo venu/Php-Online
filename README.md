@@ -11,6 +11,10 @@ Installation
 * Give write access to the code folder.
 * Thats it. Enjoy :)
 
+Demo
+----
+You can find demo here 
+http://dev.riktamtech.com/phponline/public
 
 Troubleshoot
 ------------
