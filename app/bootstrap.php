@@ -54,7 +54,7 @@
 		$template_name = $file.'.tpl';
 		$smarty->assign("template_name",$template_name);
 	}
-	
+
 	$smarty->display("user_frame.tpl");				
 ?>
 	

@@ -105,7 +105,7 @@ function php_check_runtime( $php )
 		}
 	}
 	
-    return true;
+    return $ret;
 }
 
 
