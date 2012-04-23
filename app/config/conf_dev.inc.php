@@ -1,5 +1,5 @@
 <?php
-	$CONF["PHP_PATH"] = "php"; //F:\wamp\bin\php\php5.3.9
+	$CONF["PHP_PATH"] = "php"; //usr/bin/php
 
 //database connection
 	$CONF["MYSQL_HOSTNAME"] = "localhost";

@@ -96,7 +96,8 @@ function php_check_runtime( $php )
 	if( $ret !== 0 )
 	{
 		# Runtime error to report?
-		if( (bool)preg_match('/Warning:\s*(.*?)has been disabled for security reasons in - on line\s+(\d+)/', implode(",",$ret), $match ) )
+		//if( (bool)preg_match('/Warning:\s*(.*?)has been disabled for security reasons in - on line\s+(\d+)/', implode(",",$ret), $match ) )
+		if( (bool)preg_match('/Warning:\s*(.*?)has been disabled for security reasons in (.*?)- on line\s+(\d+)/', implode(",",$ret), $match ) )
 		{
 			return array(
 				'line'    =>    (int)$match[2],
