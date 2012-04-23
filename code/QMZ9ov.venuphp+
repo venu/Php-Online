@@ -1,0 +1,19 @@
+<?php
+function signArgs($args){
+
+		ksort($args);
+		$a = '';
+		foreach($args as $k => $v)
+		{
+			if ($k == 'auth')
+				continue;
+				
+			$a .= $k . $v;
+		}
+		return sha1('mys1cr1tk1y1'.$a);
+	}
+$url = 'http://tmh.riktamtech.com/jeebster/public/api/subscriber?email=uday%40riktamtech.com&password=riktam&auth=ace4a414199d75be59497b823a477409cd6579f9&app=iPhone';
+$data = parse_url($url);
+parse_str($data['query'],$data);
+print_r($data);
+echo signArgs($data);
