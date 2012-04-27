@@ -6,12 +6,26 @@
 			if (!file_exists($filename)) break;
 		}
 		
-		if(file_put_contents($filename, trim($_POST['code']))){	
-			header("Location: editor/". $file);
-			exit;
-		}else{
+		try{
+			if(file_put_contents($filename, trim($_POST['code']))){	
+				header("Location: ".$CONF["PATH_FROM_ROOT"]."/editor/". $file);
+				exit;
+			}else{
+				header("Location: ". $CONF["PATH_FROM_ROOT"]);
+				exit;	
+			}
+		}catch(Exception $e){
 			header("Location: ". $CONF["PATH_FROM_ROOT"]);
-			exit;	
+			exit;
 		}
 	}
+	
+	//get list of added files
+	$files = '';
+	if(isset($_SESSION['user'])){
+		require_once APPLICATION_PATH . '/models/Code.php';
+		$codeObj = new Code();
+		$files = $codeObj->getMyList($_SESSION['user']['id']);
+	}
+	$smarty->assign('files', $files);
 ?>

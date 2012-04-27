@@ -2,10 +2,15 @@
 	$CONF["PHP_PATH"] = "php"; //usr/bin/php
 
 //database connection
-	$CONF["MYSQL_HOSTNAME"] = "localhost";
-	$CONF["MYSQL_USERNAME"] = "root";
-	$CONF["MYSQL_PASSWORD"] = "";
-	$CONF["MYSQL_DATABASE"]	= "";
+	$CONF["MYSQL_HOSTNAME"] = "XXXXXXX";
+	$CONF["MYSQL_USERNAME"] = "XXXX";
+	$CONF["MYSQL_PASSWORD"] = "XXXXXXXXX";
+	$CONF["MYSQL_DATABASE"]	= "XXXXXXXXXXX";
+	
+//facebook app details
+	$CONF["FB_APP_ID"]      = "XXXXXXXXXXXXXXXX";
+	$CONF["FB_APP_SECRET"] = "XXXXXXXXXXXXXXXXXXXXXXXX";
+	
 
 	
 	

@@ -1,31 +1,27 @@
 <?php
+	$revision = (isset($_GET['revision'])) ? $_GET['revision'] : '';
 	if(!isset($_GET['file']) || $_GET['file'] == ''){
-		header("Location: ". $CONF["PATH_FROM_ROOT"]);
-		exit;		
+		redirect();			
 	}
 
 	$file_name = ROOT_PATH . '/code/' . $_GET['file'] . $CONF["EXTENSION"];
 	if (!is_file($file_name)) {
-		header("Location: ". $CONF["PATH_FROM_ROOT"]);
-		exit;
+		redirect();	
 	}
 	
+	require_once APPLICATION_PATH . '/models/Code.php';
+	$codeObj = new Code();
 	if(isset($_POST['code'], $_POST['action'])){
 		switch($_POST['action']){
 			case 'Run':
 				if(!file_put_contents($file_name, trim($_POST['code']))){	
-					header("Location: ". $CONF["PATH_FROM_ROOT"]);
-					exit;	
-				}else{
-					header("Location: ".$CONF["PATH_FROM_ROOT"].'/editor/'.$_GET['file']);	
-					exit;
+					redirect();	
 				}
 				break;
 				
 			case 'Download':
 				if(!file_put_contents($file_name, trim($_POST['code']))){	
-					header("Location: ". $CONF["PATH_FROM_ROOT"]);
-					exit;	
+					redirect();	
 				}else{
 					header('Content-Description: File Transfer');
 					header('Content-Type: application/octet-stream');
@@ -41,20 +37,51 @@
 					exit;
 				}
 				break;
+
 				
-			case 'Delete':
-				if(!file_put_contents($file_name, trim($_POST['code']))){	
-					header("Location: ". $CONF["PATH_FROM_ROOT"]);
-					exit;	
-				}else{
-					unlink($file_name);
-					header("Location: ". $CONF["PATH_FROM_ROOT"]);
+			case 'Save':
+				
+				$data = array();
+				$data['filename'] = $_GET['file'];
+				$data['code'] = $_POST['code'];
+				$data['user_id'] = $_SESSION['user']['id'];
+				$revision_id = $codeObj->add($data);
+				if($revision_id){
+					if(!file_put_contents($file_name, trim($_POST['code']))){	
+						redirect();	
+					}
+					
+					header("Location: ".$CONF["PATH_FROM_ROOT"].'/editor/'.$_GET['file'].'/'.$revision_id);	
 					exit;
+				}else{
+					$errors = render_errors($codeObj->getMessages());
+					$smarty->assign('errors', $errors);	
 				}
 				break;
 			
 		}
 	}
 	
-	$smarty->assign('code', file_get_contents($file_name));		
+	
+	//get the code
+	if(!isset($_POST['code']) && $revision){
+		$code_data = $codeObj->getCode($_GET['file'], $revision);
+		if(!file_put_contents($file_name, $code_data['code'])){	
+			redirect();
+		}
+		$smarty->assign('code', $code_data['code']);		
+	}else{
+		$smarty->assign('code', file_get_contents($file_name));			
+	}
+	
+	
+	
+	//get list of added files
+	$files = '';
+	if(isset($_SESSION['user'])){
+		$files = $codeObj->getMyList($_SESSION['user']['id']);
+	}
+	$smarty->assign('files', $files);
+	
+	
 ?>

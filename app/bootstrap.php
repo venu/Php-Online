@@ -46,6 +46,7 @@
 	}
 
 	// Application related code
+	require(APPLICATION_PATH . '/modules/user/facebook_init.php');
 	if (!is_file(APPLICATION_PATH . '/modules/'. $file .'.php')) {
 		$template_name = PUBLIC_PATH .'/404.html';
 		$smarty->assign("template_name",$template_name);

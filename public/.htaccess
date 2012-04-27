@@ -6,11 +6,14 @@ php_value max_input_time 60
 php_value post_max_size 5M
 php_value upload_max_filesize 5M
 
-SetEnv APPLICATION_ENV "production"
+SetEnv APPLICATION_ENV "staging"
 
 RewriteEngine On
-RewriteRule ^editor/(.*)$ index.php?p=editor&file=$1 [NC,L]
-RewriteRule ^view/(.*)$ index.php?p=display&ajax=1&file=$1 [NC,L]
+RewriteRule ^editor/([^/.]+)/?$ index.php?p=editor&file=$1 [NC,L]
+RewriteRule ^editor/([^/.]+)/([^/.]+)/?$ index.php?p=editor&file=$1&revision=$2 [NC,L]
+RewriteRule ^view/([^/.]+)/?$ index.php?p=display&ajax=1&file=$1 [NC,L]
+RewriteRule ^view/([^/.]+)/([^/.]+)/?$ index.php?p=display&ajax=1&file=$1&revision=$2 [NC,L]
+RewriteRule ^logout/?$ index.php?p=logout [NC,L]
 
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]

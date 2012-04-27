@@ -1,0 +1,10 @@
+<?php
+function hello($who) {
+	echo 1/0;
+	return "Hello " . $who;
+}
+?>
+<p>The program says <?= hello("World") ?>.</p>
+<script>
+	alert("And here is some JS code"); // also colored
+</script>

@@ -5,15 +5,15 @@ You can run the PHP code online to quickly test some sample code. And also it he
 
 Installation
 -----------
-
 * Download the code.
-* Place your code in web root folder and access public folder. If you want to host under your domain, point to public folder.
+* Place your code in Apache root folder and access public folder. If you want to host under your domain, point to public folder.
 * Give write access to the code folder.
+* Change the config files for database connections and fb app settings, based on the environment mode set in public/.htaccess
 * Thats it. Enjoy :)
 
-Demo
+Live
 ----
-You can find demo here 
+You can find live app here 
 http://dev.riktamtech.com/phponline/public
 
 Troubleshoot
@@ -22,24 +22,23 @@ Troubleshoot
 	* SetEnv APPLICATION_ENV "development"
 * Open the environment config specific file (app/config/conf_dev.inc.php)
 	* Check the database connection
+	* Change the facebook app settings
 	* Check the php path
 * Modify the app/php.ini file
 	* you can pull the php.ini from php installation location and add disable_functions property.
 * Open config/config.inc.php file
 	* Change the file extension if you want 
+* DB schema is avaible in db/schema.sql file
 
 Features Planning
 -----------------
-
-1. Google/Facebook Login
-2. Saving the code
-3. Sharing (public, private, etc)
-4. etc
+1. Social Sharing (public, private, etc)
+2. Forking code
+3. etc
 
 	
 Contributing
 ------------
-
 1. Fork it.
 2. Create a branch (`git checkout -b Php-Online`)
 3. Commit your changes (`git commit -am "Added Php-Online"`)

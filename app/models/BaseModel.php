@@ -1,5 +1,5 @@
 <?php
-
+require_once LIBRARY_PATH . '/Zend/Db/Table/Abstract.php';
 class BaseModel extends Zend_Db_Table_Abstract
 {
 	protected $_messages = array();

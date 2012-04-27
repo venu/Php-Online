@@ -8,13 +8,13 @@ class User extends BaseModel
 	public function register($user)
     {
 		try{
-			$where = $this->getAdapter()->quoteInto('id = ?', $user['id']);
+			$where = $this->getAdapter()->quoteInto('fb_id = ?', $user['fb_id']);
 			if($row = $this->fetchRow($where)){
 				return $row->toArray();
 			}else{
 				$this->insert($user);
 				$user_id=$this->getAdapter()->lastInsertId();
-				$last_id = $this->getAdapter()->quoteInto('id = ?', $user['id']);
+				$last_id = $this->getAdapter()->quoteInto('fb_id = ?', $user['fb_id']);
 				if($row = $this->fetchRow($last_id)){
 					return $row->toArray();
 				}else{
@@ -25,9 +25,4 @@ class User extends BaseModel
 			return $e->getMessage();
 		}
     }
-	
-	public function getUserData($user_id){
-		$statement =  $this->getAdapter()->query("SELECT * from users where id = ?", array('user_id' => $user_id));
-		$data = $statement->fetch();//fetchAll	
-	}
 }

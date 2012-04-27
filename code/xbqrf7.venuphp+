@@ -1,0 +1,3 @@
+<?php
+echo   base64_encode(hash_hmac("sha1", "delete&http%3A%2F%2Fapidemo.xen.com
+%2Fv1%2Fusers%2Fa9ecd753329d7eea218562297aed4b80614c6b70733e8612cf412cc9b9abed39%2Finterests%2Fx1fa90%2Fmark&oauth_consumer_key%3DXenFlow%26oauth_nonce%3DA64682A3-3918-40D2-B6D5-E7C3EE51E73D%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1328266768%26oauth_token%3Dtoken%26oauth_version%3D1.0", "12345&", TRUE));
