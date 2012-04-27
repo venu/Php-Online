@@ -34,7 +34,10 @@ Features Planning
 -----------------
 1. Social Sharing (public, private, etc)
 2. Forking code
-3. etc
+3. Showing the versions of a file. User can access the old version by changing the number in the URL.
+4. Delete the files.
+5. Name the files.
+6. etc
 
 	
 Contributing
