@@ -1,3 +1,7 @@
+#app specific
+*.venuphp+
+*.tpl.php
+
 # Numerous always-ignore extensions
 *.diff
 *.err
@@ -40,6 +44,3 @@ psd
 # build script local files
 build/buildinfo.properties
 build/config/buildinfo.properties
-
-#app specific
-.venuphp+
